@@ -1,0 +1,343 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	border:none;
+}
+
+
+#sect1{
+	height: 100%;
+	background-image:url('../images/earth_back.jpg');
+	background-size:cover;
+	background-attachment: fixed;
+	position:relative;
+}
+
+#para{
+	height:50%;
+	width:100%;
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
+	background-color:rgba(178,184,80,0.7);
+	color:#fff;
+	text-align:center;
+}
+
+#para p{
+	font-family:cursive;
+	font-size:1em;
+	line-height:30px;
+}
+
+#first{
+	height: 100%;
+	background-color:rgba(0,0,0,0.8);
+	background-position:center;
+}
+
+#img{
+	position: absolute;
+	background-image: url('../images/earth_repeat.jpg');
+	background-repeat: repeat;
+	display: block;
+	top: -60px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 500px;
+	height: 500px;
+	padding: auto;
+	margin: auto;
+	background-size: cover;
+	border-radius: 50%;
+	box-shadow: -20px -20px 50px 2px #000 inset, 0px 0px 2px 2px #000;
+	animation:spin 150s linear alternate infinite;
+}
+
+#para1{
+	position: absolute;
+	top: 280px;
+	left: 30px;
+	display: block;
+	font-size: 4em;
+	animation:one 4s steps(10);
+	overflow: hidden;
+	white-space: nowrap;
+	width: 10ch;
+	color: #fff;
+	font-family: consolas;
+	border-right: 4px solid black;
+}
+
+#para2{
+	position: absolute;
+	top: 280px;
+	left: 73%;
+	display: block;
+	font-size: 4em;
+	animation:two 4s steps(9) 4s;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 9ch;
+	color: #fff;
+	font-family: consolas;
+	visibility: hidden;
+	border-right: 4px solid black;
+}
+
+@keyframes one{
+	0%{
+		width: 0ch;
+	}
+	100%{
+		width: 10ch;
+	}
+}
+
+@keyframes two{
+
+	0%{
+		width: 0ch;
+	}
+	100%{
+		width: 9ch;
+	}
+}
+
+@keyframes spin{
+	100%{background-position: 100%;}
+}
+
+::-webkit-scrollbar{
+	background-color: #888;
+	width: 8px;	
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+nav{
+	position: fixed;
+	background-color: rgba(0,0,0,0.4);
+	height: 50px;
+	width: 100%;
+	z-index: 99;
+	text-align:center;
+	transition:0.5s all linear;
+}
+
+
+nav a{
+	text-decoration:none;
+	color:#fff;
+	top:0px;
+	height:100%;
+	width:100px;
+	text-align:center;
+	display:inline-block;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	margin:0px;
+	padding:2px 8px 1px 8px;
+	border-radius:5px;
+	font-weight:bolder;
+	font-family:cursive;
+	transition:0.3s all linear;
+}
+
+nav a:hover{
+	border-radius:0px;
+	box-shadow:2px 2px 2px 5px #000;
+	background-color:#894;
+	transition:0.3s all linear;
+}
+
+
+#scroll{
+	position: absolute;
+	top: 90%;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+}
+
+#scroll::after{
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	border-right: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);	
+	animation:scroll 2.5s ease infinite;
+}
+
+#scroll:hover{
+	cursor: pointer;
+}
+
+@keyframes scroll{
+	0%,100%{
+		top: -30px;
+	}
+	50%{
+		top: 20px;
+		opacity:0.5;
+	}
+}
+
+#footer{
+	height:100%;
+	position:relative;
+	background-image:url('../images/grass.jpg');
+	background-attachment:fixed;
+	opacity:0.8;
+	background-size:cover;
+}
+
+#footer_right{
+	height:50%;
+	width:100%;
+	position:absolute;
+	font-family:cursive;
+	font-weight:bolder;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
+	background-color:rgba(107,107,107,0.7);
+	color:#fff;
+	text-align:center;
+	line-height:30px;
+}
+
+
+.hr{
+	position:absolute;
+	bottom:0px;
+	border-top:2px solid black;
+	width:100%;
+	text-align:center;
+}
+
+#tooltip{
+	position:absolute;
+	background-image:url(../images/earth_back.jpg);
+	height:30px;
+	width:30px;
+	border-radius:50%;
+	background-position:center;
+	bottom:20px;
+	background-size:80%;
+	left:50%;
+	cursor:pointer;
+}
+#border{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	border: 1px dashed black;
+	border-radius: 50%;
+	transform:scale(1.5);
+	transition:all 5s;
+}
+
+#tooltip:hover #border{
+	animation: borderRotate 1s infinite linear;
+}
+@keyframes borderRotate{
+	0%{
+		transform: rotate(0deg) scale(1.5);
+	}
+	100%{
+		transform:rotate(360deg) scale(1.5);
+	}
+}
+
+#content{
+	display:inline-block;
+	height:160px;
+	position:absolute;
+	z-index:99;
+	width:300px;
+	background-color:whitesmoke;
+	box-shadow:0px 0px 5px silver;
+	color:#fff;
+	font-family:cursive;
+	top:100%;
+	left:50%;
+	transform:translate(-50%,10%);
+	visibility:hidden;
+    opacity:0;
+	transition:all 0.5s;
+	border-radius:5px;
+	background-color:#777;
+}
+
+#content::before{
+	content:'\25b2';
+	font-size:20px;
+	color:#777;
+	position:absolute;
+	top:-22px;
+	left:50%;
+	transform:translate(-50%);
+}
+
+#tooltip:hover #content{
+	transform:translate(-50%,0%);
+	opacity:1;
+	visibility:visible;
+}
+
+#backToTop{
+	position:fixed;
+	right:50px;
+	bottom:50px;
+	width:50px;
+	height:50px;
+	transition:all 0.4s ease-in-out;
+	opacity:0;
+}
+
+#backToTop::after{
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	border-right: 4px solid #fff;
+	border-top: 4px solid #fff;
+	transform:rotate(-45deg);
+	transition:all 0.4s ease-in-out;
+}
+
+#backToTop:hover{
+	cursor:pointer;
+}
+
+
+
